@@ -5,12 +5,12 @@
     --hero-title-color: rgba(255, 255, 255, 1);
     --titles-color: rgba(0, 0, 0, 1);
     --app-desc-color: rgba(115, 115, 115, 1);
-    --hero-background-color: rgba(23, 16, 16, 0.6);
-    --order-background-color: rgba(37, 43, 66, 0.4);
     --footer-desc-color: rgba(92, 92, 92, 1);
     --font-family: "Montserrat", sans-serif;
     --second-family: "Poppins", sans-serif;
     --third-family: "Roboto", sans-serif;
+    --hero-bg-color: rgba(23, 16, 16, 0.6);
+    --order-bg-color: rgba(37, 43, 66, 0.4);
 }
 
 * {
@@ -22,14 +22,31 @@ body {
     font-size: 24px;
 }
 
+.title,
+.subtitle {
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.desc {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
 .container {
     width: 1210px;
     margin: 0 auto;
 }
+
 .header {
     padding-top: 50px;
     padding-bottom: 42px;
 }
+
 .header-container {
     display: flex;
     align-items: center;
@@ -62,89 +79,85 @@ body {
 }
 
 .hero {
-    background-color: var(--hero-background-color);
-    padding-top: 80px;
-    padding-bottom: 162px;
-}
-
-.hero-container {
+    background-color: var(--hero-bg-color);
     text-align: center;
+    padding-top: 79px;
+    padding-bottom: 162px;
+    background-image: url(./images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-subtitle {
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0.1px;
     color: var(--hero-subtitle-color);
+    padding-bottom: 1px;
 }
 
 .hero-title {
     font-family: var(--second-family);
     color: var(--hero-title-color);
     font-size: 58px;
-    font-weight: 700;
     line-height: 80px;
     letter-spacing: 0.2px;
-    padding-bottom: 10px;
+    margin: 0 auto;
 }
 
 .hero-desc {
     padding-bottom: 54px;
     color: var(--hero-subtitle-color);
-    font-size: 24px;
-    font-weight: 500;
     letter-spacing: 0.2px;
     line-height: 38px;
 }
 
 .hero-list {
     display: flex;
-   justify-content: center;
-   gap: 67px;
+    gap: 67px;
+    justify-content: center;
 }
 
 
 .hero-button {
     color: var(--hero-title-color);
     font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0.1px;
-    text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
     background-color: var(--hover-color);
+    padding: 16px 58px 16px 73px;
     border-width: 0;
     border-radius: 30px;
-    padding-left: 58px;
-    padding-right: 58px;
+    font-weight: 700;
 }
 
-.second-button-hero {
+.second-hero-button {
     border-width: 1px;
     border-color: var(--hero-title-color);
     border-style: solid;
     background-color: transparent;
+    padding-inline: 82px;
 }
+
+
 .app {
     padding-top: 56px;
-    padding-bottom: 190px;
+    padding-bottom: 190.78px;
 }
+
 .app-list {
     padding-left: 84px;
     padding-right: 71px;
     display: flex;
     flex-wrap: wrap;
+    gap: 108px;
 }
 
 .app-item {
     display: flex;
-    gap: 280px;
+    gap: 287px;
     align-items: center;
 }
 
 .app-item:nth-child(2) {
     flex-direction: row-reverse;
+    gap: 250px;
 }
 
 .app-title {
@@ -152,19 +165,12 @@ body {
     color: var(--titles-color);
     font-weight: 600;
     font-size: 44px;
-    line-height: 36px;
-    letter-spacing: 0.1px;
     text-align: center;
-    padding-top: 56px;
     padding-bottom: 70px;
 }
 
 .app-subtitle {
     color: var(--hover-color);
-    line-height: 36px;
-    font-size: 24px;
-    letter-spacing: 0.1px;
-    font-weight: 700;
     padding-bottom: 7px;
 }
 
@@ -172,32 +178,33 @@ body {
     font-size: 40px;
     line-height: 57px;
     color: var(--nav-text-color);
-    font-weight: 700;
     letter-spacing: 0.2px;
     padding-bottom: 17px;
 }
 
 .app-desk {
-    font-size: 24px;
     color: var(--app-desc-color);
-    font-weight: 500;
     line-height: 38px;
     letter-spacing: 0.2px;
+    max-width: 480px;
 }
 
 .order {
-    background-color: var(--order-background-color);
-    height: 509px;
+    background-color: var(--order-bg-color);
     text-align: center;
+    padding-bottom: 131px;
+    padding-top: 140px;
+    background-image: url(./images/order-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .order-title {
     color: var(--hero-title-color);
     font-size: 40px;
     line-height: 57px;
-    font-weight: 700;
     letter-spacing: 0.2px;
-    padding-top: 131px;
     padding-bottom: 10px;
 }
 
@@ -205,23 +212,20 @@ body {
     color: var(--hero-title-color);
     font-size: 24px;
     line-height: 38px;
-    font-weight: 500;
     letter-spacing: 0.2px;
     padding-bottom: 59px;
 }
 
 .order-list {
     display: flex;
-    margin: 0 auto;
     gap: 16px;
-    width: 331px;
+    justify-content: center;
 }
 
 .order-btn {
     background-color: var(--hover-color);
     color: var(--hero-title-color);
     font-size: 16px;
-    line-height: 28px;
     font-weight: 700;
     letter-spacing: 0.2px;
     border-width: 0;
@@ -232,43 +236,36 @@ body {
     padding-right: 31px;
 }
 
-.second-button-order {
+.order-btn-right {
     color: var(--hero-title-color);
     font-size: 16px;
-    line-height: 28px;
     font-weight: 700;
     letter-spacing: 0.2px;
     background-color: transparent;
     border-width: 1px;
     border-color: var(--hero-title-color);
     border-style: solid;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding: 16px 45px;
 }
-
 
 .footer {
     background-color: var(--hero-title-color);
+    padding-top: 114px;
+    padding-bottom: 58px;
 }
 
 .footer-container {
     display: flex;
     background-color: var(--hero-title-color);
     padding-left: 24px;
-    padding-top: 114px;
-    padding-bottom: 58px;
     justify-content: space-between;
+    align-items: center;
 }
 
-.footer-copywright {
-    color: var(--order-background-color);
+.footer-desc {
+    color: var(--footer-desc-color);
     font-family: var(--third-family);
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0.1px;
     font-weight: 700;
-    padding-top: 19px;
-    padding-bottom: 29px;
 }
