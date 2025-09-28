@@ -6,35 +6,27 @@
     --titles-color: rgba(0, 0, 0, 1);
     --app-desc-color: rgba(115, 115, 115, 1);
     --footer-desc-color: rgba(92, 92, 92, 1);
-    --font-family: "Montserrat", sans-serif;
-    --second-family: "Poppins", sans-serif;
-    --third-family: "Roboto", sans-serif;
+    --main-font: "Montserrat", sans-serif;
+    --second-font: "Poppins", sans-serif;
+    --third-font: "Roboto", sans-serif;
     --hero-bg-color: rgba(23, 16, 16, 0.6);
     --order-bg-color: rgba(37, 43, 66, 0.4);
 }
 
+
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--main-font);
     font-size: 24px;
-}
-
-.title,
-.subtitle {
     font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
 }
 
-.subtitle {
-    font-size: 24px;
-}
-
-.desc {
-    font-weight: 500;
-    font-size: 24px;
-}
 
 
 .container {
@@ -43,6 +35,7 @@ body {
 }
 
 .header {
+    background-color: var(--hero-title-color);
     padding-top: 50px;
     padding-bottom: 42px;
 }
@@ -74,8 +67,8 @@ body {
     line-height: 28px;
     letter-spacing: 0.2px;
     text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
 }
 
 .hero {
@@ -83,7 +76,7 @@ body {
     text-align: center;
     padding-top: 79px;
     padding-bottom: 162px;
-    background-image: url(./images/hero-bg.png);
+    background-image: url(../imgs/hero-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,7 +88,7 @@ body {
 }
 
 .hero-title {
-    font-family: var(--second-family);
+    font-family: var(--second-font);
     color: var(--hero-title-color);
     font-size: 58px;
     line-height: 80px;
@@ -125,9 +118,10 @@ body {
     border-width: 0;
     border-radius: 30px;
     font-weight: 700;
+    cursor: pointer;
 }
 
-.second-hero-button {
+.hero-button-border {
     border-width: 1px;
     border-color: var(--hero-title-color);
     border-style: solid;
@@ -194,7 +188,7 @@ body {
     text-align: center;
     padding-bottom: 131px;
     padding-top: 140px;
-    background-image: url(./images/order-bg.png);
+    background-image: url(../imgs/order-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,7 +212,6 @@ body {
 
 .order-list {
     display: flex;
-    gap: 16px;
     justify-content: center;
 }
 
@@ -236,7 +229,7 @@ body {
     padding-right: 31px;
 }
 
-.order-btn-right {
+.order-btn-border {
     color: var(--hero-title-color);
     font-size: 16px;
     font-weight: 700;
